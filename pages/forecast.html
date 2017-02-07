@@ -1,0 +1,34 @@
+<!-- <button class="btn">
+    <a href="#/" class="">Back to Search</a>
+</button>
+<h2 style="text-align: center;">Forecast for {{ city }}</h2>
+<hr /> Days:
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+        <a href="#forecast/2">
+            <button type="button" class="btn btn-primary">
+                2</button>
+        </a>
+    </div>
+    <div class="btn-group" role="group">
+        <a href="#forecast/5">
+            <button type="button" class="btn btn-info">
+                5</button>
+        </a>
+    </div>
+    <div class="btn-group" role="group">
+        <a href="#forecast/7">
+            <button type="button" class="btn btn-danger">7
+            </button>
+        </a>
+    </div>
+</div>	
+<hr />
+ -->
+<div ng-repeat="weather in weatherResult.list">
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <weather-report weather-day="weather" city={{city}} convert-to-standard="convertToCelsius(daytimeTemp)" convert-to-date="convertToDate(dt)" date-format="d MMM, y"></weather-report>
+        </div>
+    </div>
+</div>
